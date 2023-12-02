@@ -1,0 +1,40 @@
+body {
+  display: flex;
+  padding: 23.8rem 0rem 25.2rem 0rem;
+  justify-content: center;
+  align-items: center;
+  background: var(--linkbrary-bg, #f0f6ff);
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+header #logo img {
+  width: 21rem;
+  height: 3.8rem;
+}
+
+.header-bottom {
+  color: var(--black, #000);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4rem; /* 150% */
+}
+
+.signup-link {
+  color: var(--linkbrary-primary-color, #6d6afe);
+  font-weight: 600;
+  line-height: normal;
+}

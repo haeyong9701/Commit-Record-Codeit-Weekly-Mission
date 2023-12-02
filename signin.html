@@ -11,9 +11,23 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./src/reset.css" />
+    <link rel="stylesheet" href="./src/signin.css" />
   </head>
   <body>
-    로그인 페이지 입니다.
-    <a href="index.html">루트 페이지 바로가기</a>
+    <div class="login-container">
+      <header>
+        <a id="logo" href="index.html">
+          <img src="./images/logo.svg" alt="linkbary-로고" />
+        </a>
+        <div class="header-bottom">
+          <span>회원이 아니신가요?</span>
+          <a href="./signup.html" class="signup-link">회원 가입하기</a>
+        </div>
+      </header>
+      <main>
+        <div>이메일</div>
+        <div>비밀번호</div>
+      </main>
+    </div>
   </body>
 </html>
