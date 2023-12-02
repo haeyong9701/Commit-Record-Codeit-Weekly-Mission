@@ -37,7 +37,7 @@ header #logo img {
   line-height: 2.4rem; /* 150% */
 }
 
-.signup-link {
+.link-page {
   color: var(--linkbrary-primary-color, #6d6afe);
   font-weight: 600;
   line-height: normal;
@@ -69,7 +69,7 @@ input:focus {
   border: 0.1rem solid var(--linkbrary-primary-color, #6d6afe);
 }
 
-.login-button {
+.sumbit-button {
   display: flex;
   width: 40rem;
   padding: 1.6rem 2rem;
