@@ -61,7 +61,7 @@ input {
   justify-content: center;
   align-items: center;
   border-radius: 0.8rem;
-  border: 0.1rem solid var(--linkbrary-primary-color, #ccd5e3);
+  border: 0.1rem solid var(--linkbrary-gray-20, #ccd5e3);
   margin-bottom: 2.4rem;
 }
 
