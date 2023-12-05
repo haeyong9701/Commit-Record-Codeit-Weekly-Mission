@@ -12,6 +12,7 @@ body {
 
 header {
   position: sticky;
+  z-index: 1;
   top: 0;
   display: flex;
   padding: 2rem 20rem;
@@ -59,6 +60,7 @@ a {
 
 main {
   width: 100%;
+  z-index: 0;
 }
 
 .headline {
@@ -226,6 +228,7 @@ main {
 }
 
 footer {
+  z-index: 0;
   display: flex;
   height: 28rem;
   padding-top: 12rem;
