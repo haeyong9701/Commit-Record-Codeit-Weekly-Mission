@@ -1,7 +1,5 @@
 html {
-  font-style: normal;
   font-weight: 600;
-  line-height: normal;
   color: #000;
 }
 
@@ -76,7 +74,6 @@ main {
 .headline-title {
   text-align: center;
   font-size: 6.4rem;
-  font-style: normal;
   font-weight: 700;
   line-height: 8rem; /* 125% */
 }
@@ -145,7 +142,6 @@ main {
   background: #f0f6ff;
   display: inline-flex;
   align-items: center;
-  gap: -1.2rem;
 }
 
 .card {
