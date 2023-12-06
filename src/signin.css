@@ -5,7 +5,7 @@ body {
   padding: 23.8rem 0rem 25.2rem 0rem;
   justify-content: center;
   align-items: center;
-  background: var(--linkbrary-bg, #f0f6ff);
+  background: var(--background);
 }
 
 button {
@@ -32,14 +32,14 @@ header #logo img {
 }
 
 .header-bottom {
-  color: var(--black, #000);
+  color: var(--black);
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.4rem; /* 150% */
 }
 
 .link-page {
-  color: var(--linkbrary-primary-color, #6d6afe);
+  color: var(--primary);
   font-weight: 600;
 }
 
@@ -61,12 +61,12 @@ input {
   justify-content: center;
   align-items: center;
   border-radius: 0.8rem;
-  border: 0.1rem solid var(--linkbrary-gray-20, #ccd5e3);
+  border: 0.1rem solid var(--gray-20);
   margin-bottom: 2.4rem;
 }
 
 input:focus {
-  border: 0.1rem solid var(--linkbrary-primary-color, #6d6afe);
+  border: 0.1rem solid var(--primary);
 }
 
 .password-container {
@@ -88,8 +88,8 @@ input:focus {
   align-items: center;
   gap: 1rem;
   border-radius: 0.8rem;
-  background: var(--gra-purpleblue-to-skyblue, linear-gradient(91deg, #6d6afe 0.12%, #6ae3fe 101.84%));
-  color: var(--grey-light, #f5f5f5);
+  background: linear-gradient(91deg, #6d6afe 0.12%, #6ae3fe 101.84%);
+  color: var(--gray-10);
   font-size: 1.8rem;
   font-weight: 600;
 }
@@ -101,8 +101,8 @@ input:focus {
   justify-content: space-between;
   align-items: center;
   border-radius: 0.8rem;
-  border: 0.1rem solid var(--linkbrary-gray-20, #ccd5e3);
-  background: var(--linkbrary-gray-10, #e7effb);
+  border: 0.1rem solid var(--gray-20, #ccd5e3);
+  background: var(--gray-10, #e7effb);
   margin-top: 3.2rem;
 }
 
@@ -132,7 +132,7 @@ input:focus {
 }
 
 .circle.google {
-  background-color: white;
+  background-color: var(--white);
 }
 
 .circle.kakao {

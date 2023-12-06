@@ -2,7 +2,7 @@
 
 html {
   font-weight: 600;
-  color: #000;
+  color: var(--black);
 }
 
 body {
@@ -22,13 +22,13 @@ header {
   align-items: center;
   gap: 0.8rem;
   align-self: stretch;
-  background: var(--linkbrary-bg, #f0f6ff);
+  background: var(--background);
 }
 
 a {
   cursor: pointer;
   text-decoration: none;
-  color: var(--grey-light, #f5f5f5);
+  color: var(--gray-10);
 }
 
 .header-container {
@@ -46,8 +46,8 @@ a {
 .login,
 .signup {
   display: flex;
-  background: var(--gra-purpleblue-to-skyblue, linear-gradient(91deg, #6d6afe 0.12%, #6ae3fe 101.84%));
-  color: var(--grey-light, #f5f5f5);
+  background: linear-gradient(91deg, #6d6afe 0.12%, #6ae3fe 101.84%);
+  color: var(--gray-10);
   gap: 1rem;
   border-radius: 0.8rem;
   justify-content: center;
@@ -72,7 +72,7 @@ main {
   justify-content: flex-end;
   align-items: center;
   gap: 4rem;
-  background: #f0f6ff;
+  background: var(--background);
 }
 
 .headline-title {
@@ -133,7 +133,7 @@ main {
 }
 
 .description-content {
-  color: #6b6b6b;
+  color: var(--gray-80);
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 150%; /* 24px */
@@ -143,7 +143,7 @@ main {
   width: 55rem;
   height: 45rem;
   border-radius: 1.5rem;
-  background: #f0f6ff;
+  background: var(--white);
   display: inline-flex;
   align-items: center;
 }
@@ -164,7 +164,7 @@ main {
   width: 21.7rem;
   height: 21rem;
   border-radius: 1.1rem;
-  border: 0.3rem solid #6d6afe;
+  border: 0.3rem solid var(--primary);
 }
 
 .download-mark {
@@ -190,7 +190,7 @@ main {
   justify-content: center;
   align-items: center;
   border-radius: 1.5rem;
-  background: #f0f6ff;
+  background: var(--white);
 }
 
 .popup {
@@ -214,7 +214,7 @@ main {
 }
 
 .title-em.rightblue {
-  background: var(--fandom-k-gra-blue-to-pink, linear-gradient(271deg, #fe578f -9.84%, #68e8f9 107.18%));
+  background: linear-gradient(271deg, #fe578f -9.84%, #68e8f9 107.18%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -226,7 +226,7 @@ main {
   justify-content: center;
   align-items: center;
   border-radius: 1.5rem;
-  background: #f0f6ff;
+  background: var(--background);
 }
 
 footer {
@@ -246,7 +246,7 @@ footer {
   align-self: stretch;
   height: 16rem;
   padding: 3.2rem 10.4rem 6.4rem 10.4rem;
-  background: var(--the-julge-black, #111322);
+  background: var(--black);
 }
 
 .copyright,
@@ -262,7 +262,7 @@ footer {
 }
 
 .copyright {
-  color: #676767;
+  color: var(--gray-60);
 }
 
 .sub-pages {
@@ -270,7 +270,7 @@ footer {
   gap: 2rem;
   justify-content: center;
   align-items: center;
-  color: #cfcfcf;
+  color: var(--white);
   flex-grow: 1;
 }
 
