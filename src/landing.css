@@ -244,6 +244,7 @@ footer {
   align-items: center;
 }
 
+/* 태블릿 */
 @media (max-width: 1199px) {
   header {
     display: grid;
@@ -253,5 +254,27 @@ footer {
 
   .header-container {
     grid-column: 2 / span 1;
+  }
+
+  .headline {
+    padding: 3.9rem 13rem 0 13rem;
+  }
+
+  .image-rayer {
+    width: 65rem;
+    height: 38rem;
+  }
+
+  .content-image {
+    width: 38.5rem;
+    height: 31.5rem;
+  }
+
+  .description {
+    padding: 8rem 25rem 5rem 25rem;
+  }
+
+  .description-container {
+    gap: 5.1rem;
   }
 }
