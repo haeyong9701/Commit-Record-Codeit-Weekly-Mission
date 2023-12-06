@@ -1,3 +1,5 @@
+@import "./global.css";
+
 body {
   display: flex;
   padding: 23.8rem 0rem 25.2rem 0rem;
