@@ -243,3 +243,15 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 1199px) {
+  header {
+    display: grid;
+    grid-template-columns: minmax(3.2rem, auto) minmax(auto, 78.5rem) minmax(3.2rem, auto);
+    padding: 2rem 0;
+  }
+
+  .header-container {
+    grid-column: 2 / span 1;
+  }
+}
