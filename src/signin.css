@@ -1,10 +1,7 @@
 @import "./global.css";
 
 body {
-  display: flex;
   padding: 23.8rem 0rem 25.2rem 0rem;
-  justify-content: center;
-  align-items: center;
   background: var(--background);
 }
 
@@ -13,17 +10,16 @@ button {
 }
 
 .login-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
+  max-width: 40rem;
+  margin: 0 auto;
 }
 
 header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  margin-bottom: 3rem;
+  gap: 1.6rem;
 }
 
 header #logo img {
@@ -43,11 +39,6 @@ header #logo img {
   font-weight: 600;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-}
-
 label {
   font-size: 1.4rem;
   font-weight: 400;
@@ -63,6 +54,7 @@ input {
   border-radius: 0.8rem;
   border: 0.1rem solid var(--gray-20);
   margin-bottom: 2.4rem;
+  margin-top: 1.2rem;
 }
 
 input:focus {
@@ -82,7 +74,8 @@ input:focus {
 
 .sumbit-button {
   display: flex;
-  width: 40rem;
+  max-width: 40rem;
+  width: 100%;
   padding: 1.6rem 2rem;
   justify-content: center;
   align-items: center;
@@ -96,7 +89,7 @@ input:focus {
 
 .social-login {
   display: flex;
-  width: 40rem;
+  max-width: 40rem;
   padding: 1.2rem 2.4rem;
   justify-content: space-between;
   align-items: center;
@@ -137,4 +130,21 @@ input:focus {
 
 .circle.kakao {
   background-color: #f5e14b;
+}
+
+/* 태블릿 */
+@media (max-width: 1199px) {
+}
+
+/* 모바일 */
+@media (max-width: 767px) {
+  body {
+    padding: 12rem 3.2rem 23.2rem 3.2rem;
+  }
+
+  input,
+  button,
+  .social-login {
+    width: 100%;
+  }
 }
