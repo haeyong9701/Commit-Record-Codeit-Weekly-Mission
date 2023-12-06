@@ -278,3 +278,71 @@ footer {
     gap: 5.1rem;
   }
 }
+
+/* 모바일 */
+@media (max-width: 767px) {
+  #logo img {
+    width: 8.8rem;
+    height: 1.6rem;
+  }
+
+  .login,
+  .signup {
+    font-size: 1.4rem;
+    padding: 1rem 1.6rem;
+  }
+
+  .login {
+    width: 8rem;
+  }
+
+  .headline {
+    padding: 2.8rem 3.2rem 0 3.2rem;
+    gap: 2.4rem;
+  }
+
+  .headline-title {
+    font-size: 3.2rem;
+    line-height: 42px;
+  }
+
+  .signup {
+    width: 20rem;
+  }
+
+  .image-rayer,
+  .content-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+
+  .description {
+    padding: 4rem 3.2rem 3.6rem 3.2rem;
+  }
+
+  .description-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+  }
+
+  .description.reverse .description-container {
+    flex-direction: column-reverse;
+  }
+
+  .description-title {
+    font-size: 2.4rem;
+  }
+
+  footer {
+    padding-top: 4rem;
+    height: 0;
+  }
+
+  .footer-container {
+    padding: 3.2rem 3.2rem 6.4rem 3.2rem;
+    align-items: center;
+  }
+}
