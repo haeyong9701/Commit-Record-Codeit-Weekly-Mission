@@ -103,23 +103,21 @@ main {
 
 .description {
   display: flex;
-  padding: 12rem 46.1rem 5rem 46.1rem;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding: 12rem 46.1rem 5rem 46.1rem;
 }
 
 .description-container {
-  display: flex;
-  align-items: center;
-  gap: 15.7rem;
+  display: grid;
+  grid-template: repeat(2, 1fr) / min(29.3rem) min(55rem);
+  column-gap: 15.7rem;
 }
 
 .description-title {
   display: flex;
-  width: 29.1rem;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
+  align-items: flex-end;
+  margin-bottom: 0.5rem;
   font-size: 4.8rem;
   font-weight: 700;
   letter-spacing: -0.03rem;
@@ -133,6 +131,8 @@ main {
 }
 
 .description-content {
+  margin-top: 0.5rem;
+  grid-row: 2 / 3;
   color: var(--gray-80);
   font-weight: 500;
   font-size: 1.6rem;
@@ -140,26 +140,29 @@ main {
 }
 
 .content-image {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
   width: 55rem;
   height: 45rem;
 }
 
-.image-boder {
-  position: absolute;
-  top: 1rem;
-  right: 1.4rem;
-  width: 21.7rem;
-  height: 21rem;
-  border-radius: 1.1rem;
-  border: 0.3rem solid var(--primary);
+.description.reverse .description-container {
+  grid-template: repeat(2, 1fr) / min(55rem) min(29.3rem);
 }
 
-.download-mark {
-  position: absolute;
-  bottom: 0.6rem;
-  right: 0.2rem;
-  width: 4.6rem;
-  height: 4.6rem;
+.description.reverse .description-title {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.description.reverse .description-content {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.description.reverse .content-image {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
 }
 
 .description-title .title-em.yellow {
@@ -168,12 +171,6 @@ main {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: -0.03rem;
-}
-
-.popup {
-  width: 41.4rem;
-  height: 27rem;
-  flex-shrink: 0;
 }
 
 .description-title .title-em.blue {
@@ -250,6 +247,15 @@ footer {
     padding: 3.9rem 13rem 0 13rem;
   }
 
+  .description-container {
+    grid-template: repeat(2, 1fr) / min(28rem) min(38.5rem);
+    column-gap: 5.1rem;
+  }
+
+  .description.reverse .description-container {
+    grid-template: repeat(2, 1fr) / min(38.5rem) min(28rem);
+  }
+
   .image-rayer {
     width: 65rem;
     height: 38rem;
@@ -262,10 +268,6 @@ footer {
 
   .description {
     padding: 8rem 25rem 5rem 25rem;
-  }
-
-  .description-container {
-    gap: 5.1rem;
   }
 }
 
@@ -311,19 +313,30 @@ footer {
     padding: 4rem 3.2rem 3.6rem 3.2rem;
   }
 
-  .description-container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2.4rem;
-  }
-
+  .description-container,
   .description.reverse .description-container {
-    flex-direction: column-reverse;
+    grid-template-rows: 6rem 1fr 6rem;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
   }
 
-  .description-title {
+  .description-title,
+  .description.reverse .description-title {
     font-size: 2.4rem;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .description-content,
+  .description.reverse .description-content {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  .content-image,
+  .description.reverse .content-image {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
   }
 
   footer {
