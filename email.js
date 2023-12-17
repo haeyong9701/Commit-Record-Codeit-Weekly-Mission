@@ -39,11 +39,13 @@ const isEmail = (email) => {
 
 const convertEmailErrorMessage = (e) => {
   const usedEmail = "test@codeit.com";
-  if (!e.target.value) {
+  const value = e.target?.value ?? e;
+
+  if (!value) {
     createErrorSpan(convertEmptyEmailText);
-  } else if (!isEmail(e.target.value)) {
+  } else if (!isEmail(value)) {
     createErrorSpan(convertIncorrectEmailText);
-  } else if (e.target.value === usedEmail) {
+  } else if (value === usedEmail) {
     createErrorSpan(convertUsedEmail);
   } else {
     removeErrorSpan();

@@ -30,7 +30,9 @@ const convertIncorrectPasswordText = (tag) => {
 };
 
 const convertPasswordErrorMessage = (e) => {
-  if (!isPassword(e.target.value)) {
+  const value = e.target?.value ?? e;
+
+  if (!isPassword(value)) {
     createErrorSpan(convertIncorrectPasswordText);
   } else {
     removeErrorSpan();
@@ -38,3 +40,5 @@ const convertPasswordErrorMessage = (e) => {
 };
 
 passwordInputBox.addEventListener("focusout", convertPasswordErrorMessage);
+
+export default convertPasswordErrorMessage;

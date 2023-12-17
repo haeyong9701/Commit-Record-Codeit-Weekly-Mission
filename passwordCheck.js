@@ -1,7 +1,6 @@
 const passwordCheckInputBox = document.querySelectorAll(".sign-input-box.sign-password")[1];
 const passwordCheckInput = document.querySelector("#password-check");
 
-const passwordInputBox = document.querySelector(".sign-input-box.sign-password");
 const passwordInput = document.querySelector("#password");
 
 const createErrorSpan = (convertText) => {
@@ -33,7 +32,9 @@ const convertPasswordCheckText = (tag) => {
 };
 
 const convertPasswordCheckErrorMessage = (e) => {
-  if (!isSamePassword(e.target.value)) {
+  const value = e.target?.value ?? e;
+
+  if (!isSamePassword(value)) {
     createErrorSpan(convertPasswordCheckText);
   } else {
     removeErrorSpan();
@@ -41,3 +42,5 @@ const convertPasswordCheckErrorMessage = (e) => {
 };
 
 passwordCheckInputBox.addEventListener("focusout", convertPasswordCheckErrorMessage);
+
+export default convertPasswordCheckErrorMessage;
