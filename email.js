@@ -49,7 +49,7 @@ const convertEmailErrorMessage = (e, isSign) => {
     createErrorSpan(convertEmptyEmailText);
   } else if (!isEmail(value)) {
     createErrorSpan(convertIncorrectEmailText);
-  } else if (value === usedEmail && isSign === "signUp") {
+  } else if (value === usedEmail) {
     createErrorSpan(convertUsedEmail);
   } else if (value !== usedEmail && isSign === "signIn") {
     createErrorSpan(convertCheckEmail);
