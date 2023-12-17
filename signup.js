@@ -9,8 +9,8 @@ const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
 const passwordCheckInput = document.querySelector("#password-check");
 
-const checkInput = (e) => {
-  convertEmailErrorMessage(emailInput.value);
+const signUp = () => {
+  convertEmailErrorMessage(emailInput.value, "signUp");
   convertPasswordErrorMessage(passwordInput.value);
   convertPasswordCheckErrorMessage(passwordCheckInput.value);
 
@@ -21,4 +21,4 @@ const checkInput = (e) => {
 };
 
 signForm.setAttribute("onsubmit", "return false");
-signUpBtn.addEventListener("click", checkInput);
+signUpBtn.addEventListener("click", signUp);

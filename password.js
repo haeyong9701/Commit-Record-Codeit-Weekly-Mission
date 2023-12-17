@@ -29,11 +29,18 @@ const convertIncorrectPasswordText = (tag) => {
   tag.textContent = "비밀번호는 영문, 숫자 조합 8자 이상 입력해 주세요.";
 };
 
-const convertPasswordErrorMessage = (e) => {
+const convertCheckPassword = (tag) => {
+  tag.textContent = "비밀번호를 확인해주세요.";
+};
+
+const convertPasswordErrorMessage = (e, isSign) => {
+  const usedPassword = "codeit101";
   const value = e.target?.value ?? e;
 
   if (!isPassword(value)) {
     createErrorSpan(convertIncorrectPasswordText);
+  } else if (value !== usedPassword && isSign === "signIn") {
+    createErrorSpan(convertCheckPassword);
   } else {
     removeErrorSpan();
   }
