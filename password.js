@@ -33,11 +33,17 @@ const convertCheckPassword = (tag) => {
   tag.textContent = "비밀번호를 확인해주세요.";
 };
 
+const convertEmptyPasswordText = (tag) => {
+  tag.textContent = "비밀번호를 입력해주세요.";
+};
+
 const convertPasswordErrorMessage = (e, isSign) => {
   const usedPassword = "codeit101";
   const value = e.target?.value ?? e;
 
-  if (!isPassword(value)) {
+  if (!value) {
+    createErrorSpan(convertEmptyPasswordText);
+  } else if (!isPassword(value)) {
     createErrorSpan(convertIncorrectPasswordText);
   } else if (value !== usedPassword && isSign === "signIn") {
     createErrorSpan(convertCheckPassword);
