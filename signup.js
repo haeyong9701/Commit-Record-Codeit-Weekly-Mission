@@ -1,13 +1,8 @@
-import convertEmailErrorMessage from "./email.js";
-import convertPasswordErrorMessage from "./password.js";
-import convertPasswordCheckErrorMessage from "./passwordCheck.js";
+import convertEmailErrorMessage from "./functions/email.js";
+import convertPasswordErrorMessage from "./functions/password.js";
+import convertPasswordCheckErrorMessage from "./functions/passwordCheck.js";
 
-const signUpBtn = document.querySelector(".sumbit-button");
-const signForm = document.querySelector(".sign-form");
-
-const emailInput = document.querySelector("#email");
-const passwordInput = document.querySelector("#password");
-const passwordCheckInput = document.querySelector("#password-check");
+import { signUpBtn, signForm, emailInput, passwordInput, passwordCheckInput } from "./tags.js";
 
 const signUp = () => {
   convertEmailErrorMessage(emailInput.value, "signUp");

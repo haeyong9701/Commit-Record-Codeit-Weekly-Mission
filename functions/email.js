@@ -1,25 +1,7 @@
-const emailInputBox = document.querySelector(".sign-input-box");
-const emailInput = document.querySelector("#email");
+import createErrorSpan from "./createErrorSpan.js";
+import removeErrorSpan from "./removeErrorSpan.js";
 
-const createErrorSpan = (convertText) => {
-  if (emailInputBox.lastElementChild.tagName === "SPAN") {
-    const errorSpan = emailInputBox.lastElementChild;
-    convertText(errorSpan);
-  } else {
-    const span = document.createElement("span");
-    span.classList.add("error-message");
-    emailInput.classList.add("error-box");
-    convertText(span);
-    emailInputBox.append(span);
-  }
-};
-
-const removeErrorSpan = () => {
-  if (emailInputBox.lastElementChild.tagName === "SPAN") {
-    emailInputBox.lastElementChild.remove();
-    emailInput.classList.remove("error-box");
-  }
-};
+import { emailInputBox, emailInput } from "../tags.js";
 
 const convertIncorrectEmailText = (tag) => {
   tag.textContent = "올바른 이메일 주소가 아닙니다.";
@@ -46,15 +28,15 @@ const convertEmailErrorMessage = (e, isSign) => {
   const value = e.target?.value ?? e;
 
   if (!value) {
-    createErrorSpan(convertEmptyEmailText);
+    createErrorSpan(convertEmptyEmailText, emailInputBox, emailInput);
   } else if (!isEmail(value)) {
-    createErrorSpan(convertIncorrectEmailText);
+    createErrorSpan(convertIncorrectEmailText, emailInputBox, emailInput);
   } else if (value === usedEmail) {
-    createErrorSpan(convertUsedEmail);
+    createErrorSpan(convertUsedEmail, emailInputBox, emailInput);
   } else if (value !== usedEmail && isSign === "signIn") {
-    createErrorSpan(convertCheckEmail);
+    createErrorSpan(convertCheckEmail, emailInputBox, emailInput);
   } else {
-    removeErrorSpan();
+    removeErrorSpan(emailInputBox, emailInput);
   }
 };
 

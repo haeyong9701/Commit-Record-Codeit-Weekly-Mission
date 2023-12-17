@@ -1,12 +1,9 @@
-import convertEmailErrorMessage from "./email.js";
-import convertPasswordErrorMessage from "./password.js";
+import convertEmailErrorMessage from "./functions/email.js";
+import convertPasswordErrorMessage from "./functions/password.js";
 
-const emailInput = document.querySelector("#email");
-const passwordInput = document.querySelector("#password");
-const signForm = document.querySelector(".sign-form");
-const signInBtn = document.querySelector(".sumbit-button");
+import { emailInput, passwordInput, signForm, signInBtn } from "./tags.js";
 
-const login = () => {
+const signin = () => {
   const userEmail = "test@codeit.com";
   const userPassword = "codeit101";
 
@@ -19,6 +16,6 @@ const login = () => {
 };
 
 signForm.setAttribute("onsubmit", "return false");
-signInBtn.addEventListener("click", login);
+signInBtn.addEventListener("click", signin);
 
-export default login;
+export default signin;
