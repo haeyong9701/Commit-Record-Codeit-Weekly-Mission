@@ -1,5 +1,5 @@
 const passwordInputBox = document.querySelector(".sign-input-box.sign-password");
-const passwordInput = document.querySelectorAll(".sign-input")[1];
+const passwordInput = document.querySelector("#password");
 
 const createErrorSpan = (convertText) => {
   if (passwordInputBox.lastElementChild.tagName === "SPAN") {

@@ -1,5 +1,5 @@
 const emailInputBox = document.querySelector(".sign-input-box");
-const emailInput = document.querySelector(".sign-input");
+const emailInput = document.querySelector("#email");
 
 const createErrorSpan = (convertText) => {
   if (emailInputBox.lastElementChild.tagName === "SPAN") {
