@@ -1,9 +1,7 @@
 import convertEmailErrorMessage from "./email.js";
 import convertPasswordErrorMessage from "./password.js";
 
-const emailInputBox = document.querySelector(".sign-input-box");
 const emailInput = document.querySelector("#email");
-const passwordInputBox = document.querySelector(".sign-input-box.sign-password");
 const passwordInput = document.querySelector("#password");
 const signForm = document.querySelector(".sign-form");
 const signInBtn = document.querySelector(".sumbit-button");
@@ -22,3 +20,5 @@ const login = () => {
 
 signForm.setAttribute("onsubmit", "return false");
 signInBtn.addEventListener("click", login);
+
+export default login;

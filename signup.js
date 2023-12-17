@@ -22,3 +22,5 @@ const signUp = () => {
 
 signForm.setAttribute("onsubmit", "return false");
 signUpBtn.addEventListener("click", signUp);
+
+export default signUp;
