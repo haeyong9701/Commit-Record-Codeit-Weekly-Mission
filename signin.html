@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./src/signin.css" />
+    <link rel="stylesheet" href="./src/sign.css" />
   </head>
   <body>
     <div class="login-container">
@@ -25,12 +25,14 @@
       </header>
       <main>
         <form>
-          <label class="sign-input-label" for="email">이메일</label>
-          <input class="sign-input" type="email" name="email" id="email" />
-          <label class="sign-input-label" for="password">비밀번호</label>
-          <div class="password-container">
-            <input class="sign-input" type="password" name="password" id="password" />
-            <img src="./images/eye-off.png" alt="비밀번호숨기기" />
+          <div class="sign-input-box">
+            <label class="sign-input-label" for="email">이메일</label>
+            <input class="sign-input" type="email" name="email" id="email" />
+          </div>
+          <div class="sign-input-box sign-password">
+            <label class="sign-input-label" for="password">비밀번호</label>
+            <input class="sign-input" type="password" name="password" id="password" autocomplete="off" />
+            <img class="eye-button" src="./images/eye-off.png" alt="비밀번호숨기기" />
           </div>
           <button type="submit" class="sumbit-button">로그인</button>
         </form>
@@ -51,5 +53,6 @@
         </div>
       </main>
     </div>
+    <script type="module" src="index.js"></script>
   </body>
 </html>
