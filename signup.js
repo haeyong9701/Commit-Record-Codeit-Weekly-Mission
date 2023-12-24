@@ -7,7 +7,7 @@ import { signForm, emailInput, passwordInput, passwordCheckInput } from "./tags.
 const signup = (e) => {
   e.preventDefault();
 
-  validateEmail(emailInput.value);
+  validateEmail(emailInput.value, "signup");
   validatePassword(passwordInput.value);
   validateConfirmPassword(passwordCheckInput.value);
 

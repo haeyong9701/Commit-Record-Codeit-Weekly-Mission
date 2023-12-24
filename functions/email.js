@@ -16,6 +16,7 @@ const validateEmail = (e, isSign) => {
   } else if (!isEmail(value)) {
     setInputError("올바른 이메일 주소가 아닙니다.", emailInputBox, emailInput);
   } else if (value === usedEmail && isSign === "signup") {
+    console.log("dd");
     setInputError("이미 사용 중인 이메일입니다.", emailInputBox, emailInput);
   } else if (value !== usedEmail && isSign === "signin") {
     setInputError("이메일을 확인해주세요.", emailInputBox, emailInput);
