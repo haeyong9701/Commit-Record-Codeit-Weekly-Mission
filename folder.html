@@ -7,5 +7,18 @@
   </head>
   <body>
     <a href="./index.html">folder</a>
+    <button class="logout">로그아웃</button>
+    <script>
+      const logoutButton = document.querySelector(".logout");
+
+      const logout = () => {
+        if (localStorage.getItem("accessToken")) {
+          localStorage.removeItem("accessToken");
+        }
+        location.href = "./index.html";
+      };
+
+      logoutButton.addEventListener("click", logout);
+    </script>
   </body>
 </html>

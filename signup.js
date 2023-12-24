@@ -20,6 +20,10 @@ import {
   confirmPasswordToggleButton,
 } from "./tags.js";
 
+if (localStorage.getItem("accessToken")) {
+  location.href = "./folder.html";
+}
+
 const signup = async (e) => {
   e.preventDefault();
 

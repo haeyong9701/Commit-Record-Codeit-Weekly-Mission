@@ -1,6 +1,10 @@
 import { URL, TEST_USER, validateEmail, validatePassword, togglePassword } from "./utils.js";
 import { signForm, emailInputBox, emailInput, passwordInputBox, passwordInput, passwordToggleButton } from "./tags.js";
 
+if (localStorage.getItem("accessToken")) {
+  location.href = "./folder.html";
+}
+
 const signin = async (e) => {
   e.preventDefault();
 
