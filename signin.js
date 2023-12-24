@@ -1,7 +1,7 @@
 import { TEST_USER, validateEmail, validatePassword, togglePassword } from "./utils.js";
 import { signForm, emailInputBox, emailInput, passwordInputBox, passwordInput, passwordToggleButton } from "./tags.js";
 
-const signin = (e) => {
+const signin = async (e) => {
   e.preventDefault();
 
   if (TEST_USER.email === emailInput.value && TEST_USER.password === passwordInput.value) {
@@ -9,6 +9,29 @@ const signin = (e) => {
   } else {
     validateEmail(emailInput.value, "signin");
     validatePassword(passwordInput.value, "signin");
+  }
+
+  const URL = "https://bootcamp-api.codeit.kr";
+
+  const user = {
+    email: emailInput.value,
+    password: passwordInput.value,
+  };
+
+  try {
+    const response = await fetch(`${URL}/api/sign-in`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    });
+
+    if (response.status === 200) {
+      location.href = "./folder.html";
+    }
+  } catch (error) {
+    alert(error.message);
   }
 };
 

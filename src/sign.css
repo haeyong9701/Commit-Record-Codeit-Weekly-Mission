@@ -84,9 +84,6 @@ header #logo img {
   height: 1.6rem;
   cursor: pointer;
 }
-/* 
-bottom: 1.9rem;
- */
 
 .sumbit-button {
   display: flex;
@@ -102,6 +99,7 @@ bottom: 1.9rem;
   font-size: 1.8rem;
   font-weight: 600;
   margin-top: 3rem;
+  cursor: pointer;
 }
 
 .social-login {
