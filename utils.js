@@ -1,14 +1,17 @@
-const createErrorSpan = (convertText, inputBox, input) => {
+export const setInputError = (message, inputBox, input) => {
   if (inputBox.lastElementChild.tagName === "SPAN") {
     const errorSpan = inputBox.lastElementChild;
-    convertText(errorSpan);
+    errorSpan.textContent = message;
   } else {
     const span = document.createElement("span");
     span.classList.add("error-message");
     input.classList.add("error-box");
-    convertText(span);
+    span.textContent = message;
     inputBox.append(span);
   }
 };
 
-export default createErrorSpan;
+export const TEST_USER = {
+  email: "test@codeit.com",
+  password: "codeit101",
+};
