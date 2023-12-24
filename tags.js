@@ -1,20 +1,20 @@
-const emailInput = document.querySelector("#email");
-const emailInputBox = document.querySelector(".sign-input-box");
-
-const passwordInput = document.querySelector("#password");
-const passwordInputBox = document.querySelector(".sign-input-box.sign-password");
-
-const passwordCheckInput = document.querySelector("#password-check");
-const passwordCheckInputBox = document.querySelectorAll(".sign-input-box.sign-password")[1];
-
 const signForm = document.querySelector(".sign-form");
 
+const emailInputBox = document.querySelector(".sign-input-box");
+const emailInput = document.querySelector("#email");
+
+const passwordInputBox = document.querySelector(".sign-input-box.sign-password");
+const passwordInput = document.querySelector("#password");
+
+const passwordConfirmInputBox = document.querySelectorAll(".sign-input-box.sign-password")[1];
+const passwordConfirmInput = document.querySelector("#password-confirm");
+
 export {
-  emailInput,
-  emailInputBox,
-  passwordInput,
-  passwordInputBox,
-  passwordCheckInput,
-  passwordCheckInputBox,
   signForm,
+  emailInputBox,
+  emailInput,
+  passwordInputBox,
+  passwordInput,
+  passwordConfirmInputBox,
+  passwordConfirmInput,
 };
