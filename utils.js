@@ -66,3 +66,13 @@ export const removeInputError = (inputBox, input) => {
     input.classList.remove("error-box");
   }
 };
+
+export function togglePassword(input, toggleButton) {
+  if (input.getAttribute("type") === "password") {
+    input.setAttribute("type", "text");
+    toggleButton.setAttribute("src", "./images/eye-on.svg");
+    return;
+  }
+  input.setAttribute("type", "password");
+  toggleButton.setAttribute("src", "./images/eye-off.svg");
+}

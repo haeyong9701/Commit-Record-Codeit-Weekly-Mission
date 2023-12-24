@@ -1,5 +1,5 @@
-import { TEST_USER, validateEmail, validatePassword } from "./utils.js";
-import { signForm, emailInputBox, emailInput, passwordInputBox, passwordInput } from "./tags.js";
+import { TEST_USER, validateEmail, validatePassword, togglePassword } from "./utils.js";
+import { signForm, emailInputBox, emailInput, passwordInputBox, passwordInput, passwordToggleButton } from "./tags.js";
 
 const signin = (e) => {
   e.preventDefault();
@@ -14,6 +14,7 @@ const signin = (e) => {
 
 emailInputBox.addEventListener("focusout", validateEmail);
 passwordInputBox.addEventListener("focusout", validatePassword);
+passwordToggleButton.addEventListener("click", () => togglePassword(passwordInput, passwordToggleButton));
 signForm.addEventListener("submit", signin);
 
 export default signin;

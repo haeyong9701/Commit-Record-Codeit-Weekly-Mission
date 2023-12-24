@@ -1,4 +1,11 @@
-import { validateEmail, validatePassword, setInputError, removeInputError, isSamePassword } from "./utils.js";
+import {
+  validateEmail,
+  validatePassword,
+  setInputError,
+  removeInputError,
+  isSamePassword,
+  togglePassword,
+} from "./utils.js";
 
 import {
   signForm,
@@ -8,6 +15,8 @@ import {
   passwordInput,
   passwordConfirmInputBox,
   passwordConfirmInput,
+  passwordToggleButton,
+  confirmPasswordToggleButton,
 } from "./tags.js";
 
 const signup = (e) => {
@@ -36,6 +45,10 @@ const validateConfirmPassword = (e) => {
 emailInputBox.addEventListener("focusout", (event) => validateEmail(event, "signup"));
 passwordInputBox.addEventListener("focusout", validatePassword);
 passwordConfirmInputBox.addEventListener("focusout", validateConfirmPassword);
+passwordToggleButton.addEventListener("click", () => togglePassword(passwordInput, passwordToggleButton));
+confirmPasswordToggleButton.addEventListener("click", () =>
+  togglePassword(passwordConfirmInput, confirmPasswordToggleButton)
+);
 signForm.addEventListener("submit", signup);
 
 export default signup;
