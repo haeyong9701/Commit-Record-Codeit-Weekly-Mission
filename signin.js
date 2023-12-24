@@ -35,7 +35,9 @@ const signin = async (e) => {
 
 emailInputBox.addEventListener("focusout", validateEmail);
 passwordInputBox.addEventListener("focusout", validatePassword);
+
 passwordToggleButton.addEventListener("click", () => togglePassword(passwordInput, passwordToggleButton));
+
 signForm.addEventListener("submit", signin);
 
 export default signin;

@@ -1,4 +1,5 @@
 import {
+  URL,
   validateEmail,
   validatePassword,
   setInputError,
@@ -19,7 +20,7 @@ import {
   confirmPasswordToggleButton,
 } from "./tags.js";
 
-const signup = (e) => {
+const signup = async (e) => {
   e.preventDefault();
 
   validateEmail(emailInput.value, "signup");
@@ -28,7 +29,26 @@ const signup = (e) => {
 
   const errorMessageList = document.querySelectorAll(".error-message");
   if (!errorMessageList.length) {
-    location.href = "./folder.html";
+    const user = {
+      email: emailInput.value,
+      password: passwordInput.value,
+    };
+
+    try {
+      const response = await fetch(`${URL}/api/sign-up`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+      });
+
+      if (response.status === 200) {
+        location.href = "./folder.html";
+      }
+    } catch (error) {
+      alert(error.message);
+    }
   }
 };
 
@@ -45,10 +65,12 @@ const validateConfirmPassword = (e) => {
 emailInputBox.addEventListener("focusout", (event) => validateEmail(event, "signup"));
 passwordInputBox.addEventListener("focusout", validatePassword);
 passwordConfirmInputBox.addEventListener("focusout", validateConfirmPassword);
+
 passwordToggleButton.addEventListener("click", () => togglePassword(passwordInput, passwordToggleButton));
 confirmPasswordToggleButton.addEventListener("click", () =>
   togglePassword(passwordConfirmInput, confirmPasswordToggleButton)
 );
+
 signForm.addEventListener("submit", signup);
 
 export default signup;
