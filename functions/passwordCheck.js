@@ -7,7 +7,7 @@ const isSamePassword = (password) => {
   return passwordInput.value === password;
 };
 
-const convertPasswordCheckErrorMessage = (e) => {
+const validateConfirmPassword = (e) => {
   const value = e.target?.value ?? e;
 
   if (!isSamePassword(value)) {
@@ -17,6 +17,6 @@ const convertPasswordCheckErrorMessage = (e) => {
   }
 };
 
-passwordCheckInputBox.addEventListener("focusout", convertPasswordCheckErrorMessage);
+passwordCheckInputBox.addEventListener("focusout", validateConfirmPassword);
 
-export default convertPasswordCheckErrorMessage;
+export default validateConfirmPassword;

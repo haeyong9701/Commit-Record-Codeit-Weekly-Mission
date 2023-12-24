@@ -7,7 +7,7 @@ const isPassword = (password) => {
   return /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password);
 };
 
-const convertPasswordErrorMessage = (e, isSign) => {
+const validatePassword = (e, isSign) => {
   const usedPassword = "codeit101";
   const value = e.target?.value ?? e;
 
@@ -22,6 +22,6 @@ const convertPasswordErrorMessage = (e, isSign) => {
   }
 };
 
-passwordInputBox.addEventListener("focusout", convertPasswordErrorMessage);
+passwordInputBox.addEventListener("focusout", validatePassword);
 
-export default convertPasswordErrorMessage;
+export default validatePassword;

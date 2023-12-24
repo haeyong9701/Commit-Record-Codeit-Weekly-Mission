@@ -8,7 +8,7 @@ const isEmail = (email) => {
   return /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/.test(email);
 };
 
-const convertEmailErrorMessage = (e, isSign) => {
+const validateEmail = (e, isSign) => {
   const usedEmail = "test@codeit.com";
   const value = e.target?.value ?? e;
 
@@ -25,6 +25,6 @@ const convertEmailErrorMessage = (e, isSign) => {
   }
 };
 
-emailInputBox.addEventListener("focusout", convertEmailErrorMessage);
+emailInputBox.addEventListener("focusout", validateEmail);
 
-export default convertEmailErrorMessage;
+export default validateEmail;
