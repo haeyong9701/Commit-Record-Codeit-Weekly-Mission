@@ -12,10 +12,11 @@ const validatePassword = (e, isSign) => {
   const value = e.target?.value ?? e;
 
   if (!value) {
+    console.log("ddd");
     setInputError("비밀번호를 입력해주세요.", passwordInputBox, passwordInput);
   } else if (!isPassword(value)) {
     setInputError("비밀번호는 영문, 숫자 조합 8자 이상 입력해 주세요.", passwordInputBox, passwordInput);
-  } else if (value !== usedPassword && isSign === "signIn") {
+  } else if (value !== usedPassword && isSign === "signin") {
     setInputError("비밀번호를 확인해주세요.", passwordInputBox, passwordInput);
   } else {
     removeErrorSpan(passwordInputBox, passwordInput);

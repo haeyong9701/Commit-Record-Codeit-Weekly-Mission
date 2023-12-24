@@ -1,5 +1,5 @@
-import convertEmailErrorMessage from "./functions/email.js";
-import convertPasswordErrorMessage from "./functions/password.js";
+import validateEmail from "./functions/email.js";
+import validatePassword from "./functions/password.js";
 
 import { emailInput, passwordInput, signForm } from "./tags.js";
 
@@ -12,8 +12,8 @@ const signin = (e) => {
   if (userEmail === emailInput.value && userPassword === passwordInput.value) {
     location.href = "./folder.html";
   } else {
-    convertEmailErrorMessage(emailInput.value, "signIn");
-    convertPasswordErrorMessage(passwordInput.value, "signIn");
+    validateEmail(emailInput.value, "signin");
+    validatePassword(passwordInput.value, "signin");
   }
 };
 

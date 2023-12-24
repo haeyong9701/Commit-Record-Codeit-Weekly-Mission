@@ -8,8 +8,6 @@ const passwordCheckInput = document.querySelector("#password-check");
 const passwordCheckInputBox = document.querySelectorAll(".sign-input-box.sign-password")[1];
 
 const signForm = document.querySelector(".sign-form");
-const signInBtn = document.querySelector(".sumbit-button");
-const signUpBtn = document.querySelector(".sumbit-button");
 
 export {
   emailInput,
@@ -19,6 +17,4 @@ export {
   passwordCheckInput,
   passwordCheckInputBox,
   signForm,
-  signInBtn,
-  signUpBtn,
 };

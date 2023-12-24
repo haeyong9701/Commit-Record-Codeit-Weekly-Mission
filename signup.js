@@ -1,15 +1,15 @@
-import convertEmailErrorMessage from "./functions/email.js";
-import convertPasswordErrorMessage from "./functions/password.js";
-import convertPasswordCheckErrorMessage from "./functions/passwordCheck.js";
+import validateEmail from "./functions/email.js";
+import validatePassword from "./functions/password.js";
+import validateConfirmPassword from "./functions/passwordCheck.js";
 
 import { signForm, emailInput, passwordInput, passwordCheckInput } from "./tags.js";
 
-const signUp = (e) => {
+const signup = (e) => {
   e.preventDefault();
 
-  convertEmailErrorMessage(emailInput.value);
-  convertPasswordErrorMessage(passwordInput.value);
-  convertPasswordCheckErrorMessage(passwordCheckInput.value);
+  validateEmail(emailInput.value);
+  validatePassword(passwordInput.value);
+  validateConfirmPassword(passwordCheckInput.value);
 
   const errorMessageList = document.querySelectorAll(".error-message");
   if (!errorMessageList.length) {
@@ -17,6 +17,6 @@ const signUp = (e) => {
   }
 };
 
-signForm.addEventListener("submit", signUp);
+signForm.addEventListener("submit", signup);
 
-export default signUp;
+export default signup;

@@ -1,5 +1,5 @@
 const removeErrorSpan = (inputBox, input) => {
-  if (inputBox.lastElementChild.tagName === "SPAN") {
+  if (inputBox.lastElementChild.className === "error-message") {
     inputBox.lastElementChild.remove();
     input.classList.remove("error-box");
   }

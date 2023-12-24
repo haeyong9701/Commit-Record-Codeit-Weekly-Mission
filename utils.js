@@ -1,5 +1,6 @@
 export const setInputError = (message, inputBox, input) => {
-  if (inputBox.lastElementChild.tagName === "SPAN") {
+  console.log(inputBox.lastElementChild.className);
+  if (inputBox.lastElementChild.className === "error-message") {
     const errorSpan = inputBox.lastElementChild;
     errorSpan.textContent = message;
   } else {
