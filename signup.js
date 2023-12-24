@@ -3,6 +3,7 @@ import { validateEmail, validatePassword, setInputError, removeInputError, isSam
 import {
   signForm,
   emailInput,
+  emailInputBox,
   passwordInputBox,
   passwordInput,
   passwordConfirmInputBox,
@@ -32,6 +33,7 @@ const validateConfirmPassword = (e) => {
   }
 };
 
+emailInputBox.addEventListener("focusout", (event) => validateEmail(event, "signup"));
 passwordInputBox.addEventListener("focusout", validatePassword);
 passwordConfirmInputBox.addEventListener("focusout", validateConfirmPassword);
 signForm.addEventListener("submit", signup);

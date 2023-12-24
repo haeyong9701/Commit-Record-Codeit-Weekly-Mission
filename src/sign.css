@@ -30,7 +30,7 @@ header #logo img {
 .header-bottom {
   color: var(--black);
   font-size: 1.6rem;
-  line-height: 2.4rem; /* 150% */
+  line-height: 2.4rem;
 }
 
 .link-page {
@@ -38,14 +38,7 @@ header #logo img {
   font-weight: 600;
 }
 
-.sign-input-box .error-box {
-  border: 1px solid var(--red);
-}
-
-.sign-input-box .error-message {
-  display: inline-block;
-  color: var(--red);
-  font-size: 1.4rem;
+.sign-input-box {
   margin-bottom: 2.4rem;
 }
 
@@ -62,7 +55,7 @@ header #logo img {
   align-items: center;
   border-radius: 0.8rem;
   border: 0.1rem solid var(--gray-20);
-  margin-bottom: 2.4rem;
+  margin-bottom: 0.6rem;
   margin-top: 1.2rem;
 }
 
@@ -73,15 +66,27 @@ header #logo img {
 .sign-password {
   position: relative;
 }
+.sign-input.error-box {
+  border: 1px solid var(--red);
+}
+
+.error-message {
+  display: inline-block;
+  color: var(--red);
+  font-size: 1.4rem;
+}
 
 .eye-button {
   position: absolute;
-  bottom: 1.9rem;
+  top: 5rem;
   right: 1.7rem;
   width: 1.6rem;
   height: 1.6rem;
   cursor: pointer;
 }
+/* 
+bottom: 1.9rem;
+ */
 
 .sumbit-button {
   display: flex;
@@ -96,6 +101,7 @@ header #logo img {
   color: var(--gray-10);
   font-size: 1.8rem;
   font-weight: 600;
+  margin-top: 3rem;
 }
 
 .social-login {
