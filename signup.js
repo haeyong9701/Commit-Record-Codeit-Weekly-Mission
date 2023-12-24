@@ -45,6 +45,10 @@ const signup = async (e) => {
 
       if (response.status === 200) {
         location.href = "./folder.html";
+
+        const result = await response.json();
+        const { accessToken } = result.data;
+        localStorage.setItem("accessToken", accessToken);
       }
     } catch (error) {
       alert(error.message);
