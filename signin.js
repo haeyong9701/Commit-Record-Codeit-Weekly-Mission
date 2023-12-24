@@ -1,4 +1,4 @@
-import { TEST_USER, validateEmail, validatePassword, togglePassword } from "./utils.js";
+import { URL, TEST_USER, validateEmail, validatePassword, togglePassword } from "./utils.js";
 import { signForm, emailInputBox, emailInput, passwordInputBox, passwordInput, passwordToggleButton } from "./tags.js";
 
 const signin = async (e) => {
@@ -10,8 +10,6 @@ const signin = async (e) => {
     validateEmail(emailInput.value, "signin");
     validatePassword(passwordInput.value, "signin");
   }
-
-  const URL = "https://bootcamp-api.codeit.kr";
 
   const user = {
     email: emailInput.value,

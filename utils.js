@@ -1,5 +1,7 @@
 import { emailInputBox, emailInput, passwordInputBox, passwordInput } from "./tags.js";
 
+export const URL = "https://bootcamp-api.codeit.kr";
+
 export const TEST_USER = {
   email: "test@codeit.com",
   password: "codeit101",
@@ -17,15 +19,35 @@ export const isSamePassword = (password) => {
   return passwordInput.value === password;
 };
 
-export const validateEmail = (e, isSign) => {
+export const validateEmail = async (e, isSign) => {
   const inputValue = e.target?.value ?? e;
+
+  if (isSign === "signup") {
+    const userEmail = {
+      email: inputValue,
+    };
+
+    try {
+      const response = await fetch(`${URL}/api/check-email`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userEmail),
+      });
+
+      if (response.status === 409) {
+        return setInputError("이미 사용 중인 이메일입니다.", emailInputBox, emailInput);
+      }
+    } catch (error) {
+      alert(error.message);
+    }
+  }
 
   if (!inputValue) {
     setInputError("이메일을 입력해주세요.", emailInputBox, emailInput);
   } else if (!isEmail(inputValue)) {
     setInputError("올바른 이메일 주소가 아닙니다.", emailInputBox, emailInput);
-  } else if (inputValue === TEST_USER.email && isSign === "signup") {
-    setInputError("이미 사용 중인 이메일입니다.", emailInputBox, emailInput);
   } else if (inputValue !== TEST_USER.email && isSign === "signin") {
     setInputError("이메일을 확인해주세요.", emailInputBox, emailInput);
   } else {
